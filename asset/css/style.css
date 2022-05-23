@@ -1,0 +1,98 @@
+body {
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(rgba(255, 255, 255, 0.95), rgba(255, 255, 255, .95)), url(../images/bg_pindias.png) repeat;
+}
+
+section {
+    padding: 30px;
+    position: relative;
+}
+
+section .sectionHeading {
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    position: relative;
+    margin-top: 10px;
+}
+
+section .sectionHeading:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 70px;
+    height: 5px;
+    background: #5B2E91;
+}
+
+section.banner .inner {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+#aboutPage .leader {
+    min-height: 650px;
+}
+
+#aboutPage .leader .thumb img {
+    width: 100%;
+}
+
+#aboutPage .leader .info {
+    text-align: center;
+    padding: 20px 10px;
+}
+
+#aboutPage .leader .leadership {
+    padding-left: 100px;
+    height: auto;
+}
+
+#aboutPage .culture .icon .culture-item {
+    margin: 0 10px 20px;
+    padding: 55px;
+    width: 227px;
+    height: auto;
+    background: #FFFFFF;
+    border: 1px solid #802990;
+    border-radius: 8px;
+    text-align: center;
+}
+
+#aboutPage .culture .icon .culture-item img {
+    margin: 10px;
+}
+
+#aboutPage .culture .icon .culture-item p {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 150%;
+    color: #802990;
+}
+
+#aboutPage .partner .sectionHeading {
+    text-align: center;
+}
+
+#aboutPage .partner .sectionHeading::before {
+    left: 50%;
+    transform: translate(-50%, -50%);
+    bottom: -7px;
+}
+
+#aboutPage .partner .icon img {
+    max-width: 100%;
+    padding: 20px 0;
+}
+
+#aboutPage .partner .icon-float-end img {
+    float: right;
+}
