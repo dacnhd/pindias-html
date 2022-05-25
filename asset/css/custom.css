@@ -1,0 +1,27 @@
+.upload-trigger {
+    display: block;
+}
+.uploader {
+    border: 2px dashed #802990;
+    border-radius: 8px;
+    width: 100%;
+    min-height: 141px;
+    display: flex;
+    /*align-items: center;*/
+    padding: 8px;
+    justify-content: center;
+}
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+    border-style: none;
+}
+.upload-plus {
+    color: #802990;
+    font-size: 30px;
+    font-weight: bold;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}

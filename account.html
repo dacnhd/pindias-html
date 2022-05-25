@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./asset/css/style.css">
+    <link rel="stylesheet" href="./asset/css/custom.css">
+
+    <style>
+        ul {
+            list-style: none;
+        }
+
+        ul li {
+            color: #701E87;
+            text-decoration: none;
+        }
+
+        .list-action {
+            border: 1px solid #DDDDDD;
+            border-radius: 16px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .list-action .avatar {
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+        }
+
+        .list-action .name {
+            color: #343434;
+            max-width: 100%;
+            text-align: center;
+        }
+
+        .list-action .point {
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+        }
+
+        .list-action .type-account button {
+            border: 1px solid #DDDDDD;
+            border-radius: 70px;
+            width: 100%;
+        }
+
+        .list-action .personal-information img,
+        .list-action .post-management img,
+        .list-action .pro-account img,
+        .list-action .digital-investment img {
+            margin-right: 11px;
+        }
+
+        .form-check-input {
+            border-color: #701E87;
+        }
+
+        .form-check-input:checked {
+            background-color: #701E87;
+            border-color: #701E87;
+        }
+
+        .form-check-input:focus {
+            box-shadow: none;
+        }
+
+        .form-check-input:checked[type=radio] {
+            background-image: url('./asset/images/image.svg');
+        }
+
+        .account-content-action {
+            border: 1px solid #DDDDDD;
+            border-radius: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="account">
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="list-action bgWhite p-5">
+                            <div class="avatar">
+                                <img src="./asset/images/avatar.png" alt="">
+                            </div>
+                            <div class="name fw-600 fs-32 mt-3">Andy Vu</div>
+                            <div class="point">
+                                <img src="./asset/images/icon-star.png" alt="" class="mx-1">
+                                <span>100 point</span>
+                                <img src="./asset/images/icon-question.png" alt="" class="mx-1">
+                            </div>
+                            <div class="type-account w-100 mt-4">
+                                <button class="btn">Free</button>
+                            </div>
+                            <div class="personal-information mt-3 w-100">
+                                <div class="d-flex align-items-center">
+                                    <img src="./asset/images/icon-acc-info.png" alt="">
+                                    <span class="fs-16 fw-600 text-color">Personal Information</span>
+                                </div>
+                                <div>
+                                    <ul>
+                                        <li class="mt-3 fs-16">Detail information</li>
+                                        <li class="mt-3 fs-16">Change Password</li>
+                                        <li class="mt-3 fs-16">Account Management</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="post-management mt-3 w-100">
+                                <div class="d-flex align-items-center">
+                                    <img src="./asset/images/icon-acc-post.png" alt="">
+                                    <span class="fs-16 fw-600 text-color">Post Management</span>
+                                </div>
+                                <div>
+                                    <ul>
+                                        <li class="mt-3 fs-16">New Post</li>
+                                        <li class="mt-3 fs-16">Post Management</li>
+                                        <li class="mt-3 fs-16">Draft</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="pro-account mt-3 w-100">
+                                <div class="d-flex align-items-center">
+                                    <img src="./asset/images/icon-acc.png" alt="">
+                                    <span class="fs-16 fw-600 text-color">Pro Account</span>
+                                </div>
+                                <div>
+                                    <ul>
+                                        <li class="mt-3 fs-16">Register</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="digital-investment mt-3 w-100">
+                                <div class="d-flex align-items-center">
+                                    <img src="./asset/images/icon-acc.png" alt="">
+                                    <span class="fs-16 fw-600 text-color">Digital Investment</span>
+                                </div>
+                                <div>
+                                    <ul>
+                                        <li class="mt-3 fs-16">Investment lists</li>
+                                        <li class="mt-3 fs-16">Report</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="detail-information bgWhite p-5 account-content-action d-none">
+                            <div class="personal-information mb-5">
+                                <div class="fw-600 fs-20">Personal Information</div>
+                                <div class="personal mx-4">
+                                    <div class="mt-4 row ms-0 d-flex align-items-center">
+                                        <div class="col-md-3 fw-600">Avatar</div>
+                                        <div class="col-md-9">
+                                            <div style="border-radius: 50%; width: 60px; height: 60px;">
+                                                <img src="./asset/images/avatar.png" class="w-100 h-100" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mt-4 row ms-0 d-flex align-items-center">
+                                        <div class="col-md-3 fw-600">Full name <span class="clRed">*</span></div>
+                                        <div class="col-md-9">
+                                            <input type="text" class="form-control" value="Andy Vu"
+                                                placeholder="Full name">
+                                        </div>
+                                    </div>
+                                    <div class="mt-4 row ms-0 d-flex align-items-center">
+                                        <div class="col-md-3 fw-600">Date of birth</div>
+                                        <div class="col-md-9">
+                                            <input type="date" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="mt-4 row ms-0 d-flex align-items-center">
+                                        <div class="col-md-3 fw-600">Gender</div>
+                                        <div class="col-md-9">
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input text-color" type="radio"
+                                                    name="inlineRadioOptions" id="inlineRadio1" value="Male" checked>
+                                                <label class="form-check-label text-color"
+                                                    for="inlineRadio1">Male</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input text-color" type="radio"
+                                                    name="inlineRadioOptions" id="inlineRadio2" value="Female">
+                                                <label class="form-check-label text-color"
+                                                    for="inlineRadio2">Female</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mt-4 row ms-0 d-flex align-items-center">
+                                        <div class="col-md-3 fw-600">Address</div>
+                                        <div class="col-md-9">
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <select class="form-select" aria-label="Default select example">
+                                                        <option selected>Hanoi</option>
+                                                        <option value="1">One</option>
+                                                        <option value="2">Two</option>
+                                                        <option value="3">Three</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <select class="form-select" aria-label="Default select example">
+                                                        <option selected>Bac Tu Liem</option>
+                                                        <option value="1">One</option>
+                                                        <option value="2">Two</option>
+                                                        <option value="3">Three</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <select class="form-select" aria-label="Default select example">
+                                                        <option selected>Phu Diem</option>
+                                                        <option value="1">One</option>
+                                                        <option value="2">Two</option>
+                                                        <option value="3">Three</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 fw-600"></div>
+                                        <div class="col-md-9 mt-3">
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <select class="form-select" aria-label="Default select example">
+                                                        <option selected>Street</option>
+                                                        <option value="1">One</option>
+                                                        <option value="2">Two</option>
+                                                        <option value="3">Three</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-md-8">
+                                                    <input type="text" class="form-control" value="93 hoang cong chat">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="contact-information mb-5">
+                                <div class="fw-600 fs-20">Contact Information</div>
+                                <div class="contact mx-4">
+                                    <div class="mt-4 row ms-0 d-flex align-items-center">
+                                        <div class="col-md-3 fw-600">Mobile <span class="clRed">*</span></div>
+                                        <div class="col-md-9">
+                                            <input type="text" class="form-control" value="0123456789"
+                                                placeholder="Mobile">
+                                        </div>
+                                    </div>
+                                    <div class="mt-4 row ms-0 d-flex align-items-center">
+                                        <div class="col-md-3 fw-600">Email <span class="clRed">*</span></div>
+                                        <div class="col-md-9">
+                                            <input type="email" class="form-control" value="loremipsum@gmail.com"
+                                                placeholder="Email">
+                                        </div>
+                                    </div>
+                                    <div class="mt-4 row ms-0 d-flex align-items-center">
+                                        <div class="col-md-3 fw-600">Personal ID <span class="clRed">*</span></div>
+                                        <div class="col-md-9">
+                                            <input type="text" class="form-control" value="123456789"
+                                                placeholder="Personal ID">
+                                        </div>
+                                    </div>
+                                    <div class="mt-4 row ms-0 d-flex align-items-center">
+                                        <div class="col-md-3 fw-600">Facebook</div>
+                                        <div class="col-md-9">
+                                            <input type="text" class="form-control" placeholder="Facebook">
+                                        </div>
+                                    </div>
+                                    <div class="mt-4 row ms-0 d-flex align-items-center">
+                                        <div class="col-md-3 fw-600">Twitter</div>
+                                        <div class="col-md-9">
+                                            <input type="text" class="form-control" placeholder="Twitter">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="vat-information mb-5">
+                                <div class="fw-600 fs-20">VAT Information</div>
+                                <div class="vat mx-4">
+                                    <div class="mt-4 row ms-0 d-flex align-items-center">
+                                        <div class="col-md-3 fw-600">Buyer name <span class="clRed">*</span></div>
+                                        <div class="col-md-9">
+                                            <input type="text" class="form-control" value="Lorem Ipsum"
+                                                placeholder="Buyer name">
+                                        </div>
+                                    </div>
+                                    <div class="mt-4 row ms-0 d-flex align-items-center">
+                                        <div class="col-md-3 fw-600">Company <span class="clRed">*</span></div>
+                                        <div class="col-md-9">
+                                            <input type="text" class="form-control" value="Lorem Ipsum"
+                                                placeholder="Company">
+                                        </div>
+                                    </div>
+                                    <div class="mt-4 row ms-0 d-flex align-items-center">
+                                        <div class="col-md-3 fw-600">Tax ID <span class="clRed">*</span></div>
+                                        <div class="col-md-9">
+                                            <input type="text" class="form-control" value="1241234568"
+                                                placeholder="Tax ID">
+                                        </div>
+                                    </div>
+                                    <div class="mt-4 row ms-0 d-flex align-items-center">
+                                        <div class="col-md-3 fw-600">Address</div>
+                                        <div class="col-md-9">
+                                            <input type="text" class="form-control" placeholder="Address">
+                                        </div>
+                                    </div>
+                                    <div class="mt-4 row ms-0 d-flex align-items-center">
+                                        <div class="col-md-3 fw-600">Email</div>
+                                        <div class="col-md-9">
+                                            <input type="email" class="form-control" placeholder="Email">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <button class="btn btnGrad" style="width: 128px;height: 46px;">Edit</button>
+                            </div>
+                        </div>
+                        <div class="change-password bgWhite p-5 account-content-action d-none">
+                            <div class="change-pass mb-5">
+                                <div class="fw-600 fs-20">Change Password</div>
+                                <div class="change mx-4">
+                                    <div class="mt-4 row ms-0 d-flex align-items-center">
+                                        <div class="col-md-3 fw-600">Old Password <span class="clRed">*</span></div>
+                                        <div class="col-md-9">
+                                            <input type="text" class="form-control" placeholder="Old Password">
+                                        </div>
+                                        <div class="col-md-3 fw-600"></div>
+                                        <div class="col-md-9 mt-3">
+                                            <span style="color: #717171; font-size: 14px;">If you forget your password
+                                                or log in with Facebook, Google without
+                                                registering, then log out of your account, then use the reset password
+                                                function to get the current password.</span>
+                                        </div>
+                                    </div>
+                                    <div class="mt-4 row ms-0 d-flex align-items-center">
+                                        <div class="col-md-3 fw-600">New Password</div>
+                                        <div class="col-md-9">
+                                            <input type="text" class="form-control" placeholder="New Password">
+                                        </div>
+                                    </div>
+                                    <div class="mt-4 row ms-0 d-flex align-items-center">
+                                        <div class="col-md-3 fw-600">Retype New Password</div>
+                                        <div class="col-md-9">
+                                            <input type="text" class="form-control" placeholder="New Password">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="new-post bgWhite p-5 account-content-action">
+                            <div class="basic-information mb-5">
+                                <div class="fw-600 fs-20">Basic Information</div>
+                                <div class="mx-4">
+                                    <div class="mt-4 row ms-0 d-flex align-items-center">
+                                        <div class="col-md-3 fw-600">Type</div>
+                                        <div class="col-md-9">
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input text-color" type="radio"
+                                                    name="inlineRadioOptions" id="inlineInfoRadio1" value="Sell">
+                                                <label class="form-check-label text-color"
+                                                    for="inlineInfoRadio1">Sell</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input text-color" type="radio"
+                                                    name="inlineRadioOptions" id="inlineInfoRadio2" value="Rent">
+                                                <label class="form-check-label text-color"
+                                                    for="inlineInfoRadio2">Rent</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mt-4 row ms-0 d-flex align-items-center">
+                                        <div class="col-md-3 fw-600">Property Type</div>
+                                        <div class="col-md-9">
+                                            <input type="text" class="form-control" placeholder="Property Type">
+                                        </div>
+                                    </div>
+                                    <div class="mt-4 row ms-0 d-flex align-items-center">
+                                        <div class="col-md-3 fw-600">Date of birth</div>
+                                        <div class="col-md-9">
+                                            <input type="date" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="mt-4 row ms-0 d-flex align-items-center">
+                                        <div class="col-md-3 fw-600">Address</div>
+                                        <div class="col-md-9">
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <select class="form-select" aria-label="Default select example">
+                                                        <option selected>Hanoi</option>
+                                                        <option value="1">One</option>
+                                                        <option value="2">Two</option>
+                                                        <option value="3">Three</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <select class="form-select" aria-label="Default select example">
+                                                        <option selected>Bac Tu Liem</option>
+                                                        <option value="1">One</option>
+                                                        <option value="2">Two</option>
+                                                        <option value="3">Three</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <select class="form-select" aria-label="Default select example">
+                                                        <option selected>Phu Diem</option>
+                                                        <option value="1">One</option>
+                                                        <option value="2">Two</option>
+                                                        <option value="3">Three</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 fw-600"></div>
+                                        <div class="col-md-9 mt-3">
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <select class="form-select" aria-label="Default select example">
+                                                        <option selected>Street</option>
+                                                        <option value="1">One</option>
+                                                        <option value="2">Two</option>
+                                                        <option value="3">Three</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-md-8">
+                                                    <input type="text" class="form-control" value="93 hoang cong chat">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="post-information mb-5">
+                                <div class="fw-600 fs-20">Post Information</div>
+                                <div class="mx-4">
+                                    <div class="mt-4 row ms-0 d-flex align-items-center">
+                                        <div class="col-md-3 fw-600">Title <span class="clRed">*</span></div>
+                                        <div class="col-md-9">
+                                            <textarea class="form-control" rows="3"></textarea>
+                                            <span class="fs-12 mt-1" style="color: #9A9A9A; float:right;">Minimum 30
+                                                characters, maximum 99 characters</span>
+                                        </div>
+                                    </div>
+                                    <div class="mt-4 row ms-0 d-flex align-items-center">
+                                        <div class="col-md-3 fw-600">Description <span class="clRed">*</span></div>
+                                        <div class="col-md-9">
+                                            <textarea class="form-control" rows="3"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="mt-4 row ms-0 d-flex align-items-center">
+                                        <div class="col-md-3 fw-600">Post type</div>
+                                        <div class="col-md-9">
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <select class="form-select" aria-label="Default select example">
+                                                        <option selected>Basic</option>
+                                                        <option value="1">One</option>
+                                                        <option value="2">Two</option>
+                                                        <option value="3">Three</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mt-4 row ms-0 d-flex align-items-center">
+                                        <div class="col-md-3 fw-600">Post Duration (Day)</div>
+                                        <div class="col-md-9">
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <select class="form-select" aria-label="Default select example">
+                                                        <option selected>10</option>
+                                                        <option value="1">One</option>
+                                                        <option value="2">Two</option>
+                                                        <option value="3">Three</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mt-4 row ms-0 d-flex align-items-center">
+                                        <div class="col-md-3 fw-600">Starting Date</div>
+                                        <div class="col-md-9">
+                                            <input type="date" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="mt-4 row ms-0 d-flex align-items-center">
+                                        <div class="col-md-3 fw-600">Starting Date</div>
+                                        <div class="col-md-9">
+                                            <input type="datetime-local" class="form-control">
+                                            <span style="float: right; color: #343434; font-size: 14px;"
+                                                class="fw-600 mt-2">Apply for advanced & pro account</span>
+                                        </div>
+                                    </div>
+                                    <div class="mt-4 row ms-0 d-flex align-items-center">
+                                        <div class="col-md-3 fw-600">Auto Repost</div>
+                                        <div class="col-md-9">
+                                            <div class="form-check form-switch">
+                                                <input class="form-check-input"
+                                                    style="font-size: 30px; margin-left:-1.5rem" type="checkbox"
+                                                    checked>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mb-5">
+                                <div class="fw-600 fs-20" style="height: 30px;"></div>
+                                <div class="mx-4">
+                                    <div class="mt-4 row ms-0 d-flex align-items-center">
+                                        <div class="col-md-3 fw-600">House Size <span class="clRed">*</span></div>
+                                        <div class="col-md-9">
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <input type="text" class="form-control" placeholder="Size">
+                                                </div>
+                                                <div class="col-md-8 d-flex align-items-center"
+                                                    style="padding-left: 4px;">
+                                                    <span class="fw-600 fs-16">m2</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mt-4 row ms-0 d-flex align-items-center">
+                                        <div class="col-md-3 fw-600">Price <span class="clRed">*</span></div>
+                                        <div class="col-md-9">
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <input type="text" class="form-control" placeholder="Price">
+                                                </div>
+                                                <div class="col-md-8 d-flex align-items-center"
+                                                    style="padding-left: 4px;">
+                                                    <span class="fw-600 fs-16">USD</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mt-4 row ms-0 d-flex align-items-center">
+                                        <div class="col-md-3 fw-600">Legal Document</div>
+                                        <div class="col-md-9">
+                                            <button class="btn" style="width: 144px; height: 46px;">Contract</button>
+                                            <button class="btn" style="width: 144px; height: 46px;">Red book</button>
+                                        </div>
+                                    </div>
+                                    <div class="mt-4 row ms-0 d-flex align-items-center">
+                                        <div class="col-md-3 fw-600">Living room</div>
+                                        <div class="col-md-9 d-flex">
+                                            <button class="btn fw-bold fs-16"
+                                                style="width: 46px; height: 46px;">+</button>
+                                            <input type="number" style=" width:65px;" class="form-control" value="0">
+                                            <button class="btn fw-bold fs-16"
+                                                style="width: 46px; height: 46px;">-</button>
+                                        </div>
+                                    </div>
+                                    <div class="mt-4 row ms-0 d-flex align-items-center">
+                                        <div class="col-md-3 fw-600">Bathroom</div>
+                                        <div class="col-md-9 d-flex">
+                                            <button class="btn fw-bold fs-16"
+                                                style="width: 46px; height: 46px;">+</button>
+                                            <input type="number" style=" width:65px;" class="form-control" value="0">
+                                            <button class="btn fw-bold fs-16"
+                                                style="width: 46px; height: 46px;">-</button>
+                                        </div>
+                                    </div>
+                                    <div class="mt-4 row ms-0 d-flex align-items-center">
+                                        <div class="col-md-3 fw-600">Floors</div>
+                                        <div class="col-md-9 d-flex">
+                                            <button class="btn fw-bold fs-16"
+                                                style="width: 46px; height: 46px;">+</button>
+                                            <input type="number" style=" width:65px;" class="form-control" value="0">
+                                            <button class="btn fw-bold fs-16"
+                                                style="width: 46px; height: 46px;">-</button>
+                                        </div>
+                                    </div>
+                                    <div class="mt-4 row ms-0 d-flex align-items-center">
+                                        <div class="col-md-3 fw-600">House quater</div>
+                                        <div class="col-md-9">
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <select class="form-select" aria-label="Default select example">
+                                                        <option selected>House quater</option>
+                                                        <option value="1">One</option>
+                                                        <option value="2">Two</option>
+                                                        <option value="3">Three</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mt-4 row ms-0 d-flex align-items-center">
+                                        <div class="col-md-3 fw-600">Balcony quater</div>
+                                        <div class="col-md-9">
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <select class="form-select" aria-label="Default select example">
+                                                        <option selected>Balcony quater</option>
+                                                        <option value="1">One</option>
+                                                        <option value="2">Two</option>
+                                                        <option value="3">Three</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mt-4 row ms-0 d-flex align-items-center">
+                                        <div class="col-md-3 fw-600">Frontispiece</div>
+                                        <div class="col-md-9">
+                                            <input type="text" class="form-control" placeholder="Frontispiece">
+                                        </div>
+                                    </div>
+                                    <div class="mt-4 row ms-0 d-flex align-items-center">
+                                        <div class="col-md-3 fw-600">Entrance way</div>
+                                        <div class="col-md-9">
+                                            <input type="text" class="form-control" placeholder="Entrance way">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mb-5">
+                                <div class="fw-600 fs-20" style="height: 30px;"></div>
+                                <div class="mx-4">
+                                    <div class="mt-4 row ms-0 d-flex align-items-center">
+                                        <div class="form-group">
+                                            <div id="thumbnail">
+                                                <label class="upload-trigger" for="thumbnailInput">
+                                                    <div class="uploader">
+                                                        <img src="" data-target="#thumbnailInput"
+                                                            class="img-fluid upload-preview"
+                                                            data-content="uploadPreview" />
+
+                                                        <span data-content="uploadPlus" class="upload-plus d-flex" style="flex-direction: column;">
+                                                            <img src="./asset/images/download.png" alt="">
+                                                            <div class="text-color fs-16 mt-3">Upload photo</div>
+                                                        </span>
+                                                    </div>
+                                                </label>
+
+                                                <input type="file" name="thumbnail" class="d-none not-empty"
+                                                    data-error="Hình đại diện không hợp lệ" id="thumbnailInput"
+                                                    required />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mt-4 row ms-0 d-flex align-items-center">
+                                        <div class="col-md-4 fw-600">
+                                            <img src="./asset/images/logo-youtube.png" alt="">
+                                            <span>Video from Youtube</span>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input type="text" class="form-control" placeholder="Link youtube">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+
+</html>

@@ -9,15 +9,15 @@ body input.form-control:focus,
 body select.form-select:focus,
 body textarea.form-control:focus,
 body span.input-group-text {
-	outline: none;
-	box-shadow: none;
-	border-color: #808080;
+    outline: none;
+    box-shadow: none;
+    border-color: #808080;
 }
 
-body input.input-search:focus{
+body input.input-search:focus {
     outline: none;
-	box-shadow: none;
-	border-color: #808080;
+    box-shadow: none;
+    border-color: #808080;
 }
 
 .input-search {
@@ -34,56 +34,87 @@ body input.input-search:focus{
     padding: .5em 1em .5em 2.5em;
 }
 
-.bgWhite {
-	background: #fff;
-}
-.btnGrad {
-	color: #fff;
-	font-size: 14px;
-	font-family: gothamMedium;
-	padding: 10px 30px;
-	line-height: 100%;
-	cursor: pointer;
-	transition: 0.5s;
-	background-size: 200% auto;
-    background: linear-gradient(to right, #3d107b 0%, #6b0876 51%, #920071 100%);
-}
-.btnGrad:hover {
-	color: #fff;
-	background-position: right center;
-}
-.btnGrad.btnOutline {
-	border: 1px solid #8b0172;
-	background: #fff;
-	color: #8b0172;
-}
-.btnGrad.btnOutline:hover {
-	color: #fff;
-	border-color: transparent;
-	background: linear-gradient(to right, #3d107b 0%, #6b0876 51%, #920071 100%);
-}
-.btnGrad .fas {
-	margin: 0 10px;
-}
-.bgGrad {
-	background: linear-gradient(90deg, #3d107b 0%, #6b0876 51%, #920071 100%);
-}
-.bgGrey {
-	background: #e6e6e6;
+body input{
+    height:46px;
 }
 
-.clRed{
+.bgWhite {
+    background: #fff;
+}
+
+.btnGrad {
+    color: #fff;
+    font-size: 14px;
+    font-family: gothamMedium;
+    padding: 10px 30px;
+    line-height: 100%;
+    cursor: pointer;
+    transition: 0.5s;
+    background-size: 200% auto;
+    background: linear-gradient(to right, #3d107b 0%, #6b0876 51%, #920071 100%);
+}
+
+.btnGrad:hover {
+    color: #fff;
+    background-position: right center;
+}
+
+.btnGrad.btnOutline {
+    border: 1px solid #8b0172;
+    background: #fff;
+    color: #8b0172;
+}
+
+.btnGrad.btnOutline:hover {
+    color: #fff;
+    border-color: transparent;
+    background: linear-gradient(to right, #3d107b 0%, #6b0876 51%, #920071 100%);
+}
+
+.btnGrad .fas {
+    margin: 0 10px;
+}
+
+.bgGrad {
+    background: linear-gradient(90deg, #3d107b 0%, #6b0876 51%, #920071 100%);
+}
+
+.bgGrey {
+    background: #e6e6e6;
+}
+
+.clRed {
     color: red;
 }
 
-.fs-24{
+.fs-12{
+    font-size: 12px;
+}
+.fs-16 {
+    font-size: 16px;
+}
+
+.fs-20{
+    font-size: 20px;
+}
+.fs-24 {
     font-size: 24px;
 }
-.fs-32{
+
+.fs-32 {
     font-size: 32px;
 }
-.fs-40{
+
+.fs-40 {
     font-size: 40px;
+}
+
+.fw-600 {
+    font-weight: 600;
+}
+
+.text-color {
+    color: #701E87;
 }
 
 
@@ -120,6 +151,44 @@ section.banner .inner {
     align-items: center;
     justify-content: center;
     color: #fff;
+}
+
+/* Button */
+.btn:focus {
+    box-shadow: none;
+}
+
+/* Form search */
+.btn-group>.btn-group:not(:first-child),
+.btn-group>.btn:not(:first-child) {
+    margin-left: 0;
+}
+
+.btn-group .btn {
+    border-radius: 0;
+    font-size: 14px;
+    color: #c6a5cf;
+}
+
+.btn-check:focus+.btn,
+.btn:focus {
+    box-shadow: none;
+}
+
+.btn-check:checked+.btn {
+    color: #fff;
+}
+
+.btn-check:checked+.label-home-radio::before {
+    color: #fff;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    width: 30px;
+    height: 2px;
+    background: #fff;
 }
 
 /* About Us */
@@ -204,4 +273,80 @@ section.banner .inner {
 
 #guidePage .guide-contact form label {
     font-weight: 600;
+}
+
+/* FAQs */
+#faqPage .accordion-item {
+    margin-top: 20px;
+    background-color: transparent;
+}
+
+#faqPage .accordion-flush .accordion-item:last-child {
+    border-bottom-color: rgba(0, 0, 0, 0.125);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+}
+
+#faqPage .accordion-header {
+    padding-bottom: 5px;
+}
+
+#faqPage .accordion-button {
+    padding: 0;
+    background: transparent;
+}
+
+#faqPage .accordion-button::after {
+    content: "+";
+    background: transparent;
+    border-radius: 50%;
+    background-color: #701E87;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#faqPage .accordion-button:not(.collapsed)::after {
+    content: "-";
+    background: transparent;
+    transform: none;
+    border-radius: 50%;
+    background-color: #701E87;
+    color: #fff;
+}
+
+#faqPage button:focus:not(:focus-visible) {
+    outline: transparent;
+}
+
+#faqPage .accordion-button:focus {
+    border-color: transparent;
+    outline: transparent;
+    box-shadow: none;
+}
+
+#faqPage .accordion-button:not(.collapsed) {
+    color: #212529;
+    background-color: transparent;
+    box-shadow: none;
+}
+
+#faqPage .accordion-button span {
+    width: 90%;
+    font-size: 20px;
+}
+
+#faqPage .accordion-body {
+    padding: 1rem 0rem;
+}
+
+#faqPage ul {
+    list-style: none;
+}
+
+#faqPage ul li a {
+    color: #701E87;
+    text-decoration: none;
 }
