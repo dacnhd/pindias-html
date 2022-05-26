@@ -117,6 +117,15 @@ body input{
     color: #701E87;
 }
 
+ul {
+    list-style: none;
+}
+
+ul li {
+    color: #701E87;
+    text-decoration: none;
+}
+
 
 section {
     padding: 30px;
@@ -154,6 +163,15 @@ section.banner .inner {
 }
 
 /* Button */
+.btn{
+    height: 46px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 16px;
+}
+.btn:hover {
+    color: #701E87;
+}
 .btn:focus {
     box-shadow: none;
 }
@@ -342,11 +360,297 @@ section.banner .inner {
     padding: 1rem 0rem;
 }
 
-#faqPage ul {
-    list-style: none;
-}
-
 #faqPage ul li a {
     color: #701E87;
     text-decoration: none;
+}
+
+/* --------------------------------------------------ACCOUNT-------------------------------------------------- */
+#account .list-action {
+    border: 1px solid #DDDDDD;
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#account .list-action .avatar {
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+}
+
+#account .list-action .name {
+    color: #343434;
+    max-width: 100%;
+    text-align: center;
+}
+
+#account .list-action .point {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+}
+
+#account .list-action .type-account button {
+    border: 1px solid #DDDDDD;
+    border-radius: 70px;
+    width: 100%;
+}
+
+#account .list-action .personal-information img,
+#account .list-action .post-management img,
+#account .list-action .pro-account img,
+#account .list-action .digital-investment img {
+    margin-right: 11px;
+}
+
+#account .form-check-input {
+    border-color: #701E87;
+}
+
+#account .form-check-input:checked {
+    background-color: #701E87;
+    border-color: #701E87;
+}
+
+#account .form-check-input:focus {
+    box-shadow: none;
+}
+
+#account .form-check-input:checked[type=radio] {
+    background-image: url('../images/image.svg');
+}
+
+#account .account-content-action {
+    border: 1px solid #DDDDDD;
+    border-radius: 16px;
+}
+
+/* detail-information */
+#account .detail-information button {
+    width: 128px
+}
+
+#account .detail-information .avatar {
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+}
+
+/* change-password */
+#account .change-password .old-password .note {
+    color: #717171;
+    font-size: 14px;
+    line-height: 150%;
+}
+
+/* new-post */
+#account .new-post .post-information .note {
+    color: #9A9A9A;
+    float: right;
+}
+
+#account .new-post .post-information .schedule-posting span {
+    float: right;
+    color: #343434;
+    font-size: 14px;
+}
+
+#account .new-post .post-information .auto-repost input {
+    font-size: 30px;
+    margin-left: -1.5rem
+}
+
+#account .new-post .no-text {
+    height: 30px;
+}
+
+#account .new-post .house-size .unit-area,
+#account .new-post .price .unit-price {
+    padding-left: 4px;
+}
+
+#account .new-post .legal-document button {
+    width: 144px;
+}
+
+#account .new-post .living-room button,
+#account .new-post .bathroom button,
+#account .new-post .floors button {
+    width: 46px;
+}
+
+#account .new-post .living-room input,
+#account .new-post .bathroom input,
+#account .new-post .floors input {
+    width: 65px;
+}
+
+#account .new-post .btn.preview,
+#account .new-post .btn.post {
+    width: 128px;
+}
+
+/* pro-account */
+#account .pro-account .pro-account-header div {
+    padding-left: 3.5rem;
+}
+
+#account .pro-account .pro-account-content .item {
+    border: 1px solid #701E87;
+    border-radius: 16px;
+    height: 692px;
+    flex-direction: column;
+}
+
+#account .pro-account .pro-account-content .item .pro-acc-head {
+    height: 70px;
+    border-bottom: 1px solid #701E87;
+}
+
+#account .pro-account .pro-account-content .item .pro-acc-nav {
+    flex-direction: column;
+}
+
+#account .pro-account .pro-account-content .item .pro-acc-body {
+    height: 416px;
+}
+
+#account .pro-account .pro-account-content .item .pro-acc-footer {
+    flex-grow: 1;
+}
+
+#account .pro-account .pro-account-content .item .pro-acc-footer button {
+    width: 175px;
+}
+
+#account .pro-account .pro-account-content ul {
+    padding: 0 27px;
+    list-style: inside;
+}
+
+#account .pro-account .pro-account-content ul li::marker {
+    content: url("../images/icon-check.svg");
+}
+
+#account .pro-account .pro-account-content ul li {
+    margin-bottom: 16px;
+}
+
+#account .pro-account .pro-account-content ul li span {
+    margin-left: 10px;
+    color: #343434;
+}
+
+/* post-list */
+#account .post-list button {
+    border-radius: 20px;
+    background: transparent;
+}
+
+#account .post-list .table thead tr th,
+.draft .table thead tr th {
+    font-weight: 400;
+}
+
+#account .post-list .table tbody tr,
+.draft .table tbody tr {
+    border: transparent;
+}
+
+#account .post-list .table tbody tr th,
+.draft .table tbody tr th {
+    font-weight: 600;
+}
+
+#account .post-list .table tbody th img,
+.draft .table tbody th img {
+    width: 120px;
+    height: 100px;
+}
+
+#account .post-list .table a:hover,
+.draft .table a:hover {
+    color: #701E87;
+}
+
+#account .post-list .post-list-head .input-search {
+    height: 44px;
+    background-position: 10px 12px;
+}
+
+#account .post-list .post-list-head button {
+    width: 128px;
+    justify-content: center;
+    align-items: center;
+}
+
+#account .post-list .post-list-body {
+    justify-content: space-between;
+}
+
+#account .post-list .post-list-body select {
+    border: none;
+    background-image: url('../images/icon-dropdown.svg');
+}
+
+#account .post-list .post-list-body button:focus {
+    color: #fff;
+    background: #802990;
+    border-radius: 20px;
+    font-weight: 600;
+}
+
+/* draft */
+#account .draft .draft-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#account .draft .draft-head button {
+    width: 147px;
+}
+
+/* investment-lists */
+#account .investment-lists .item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#account .investment-lists .item .item-info {
+    border: 1px solid #DDDDDD;
+    border-radius: 8px;
+    padding: 8px;
+}
+
+#account .investment-lists .invest-date,
+#account .investment-lists .cur-value,
+#account .investment-lists .roi,
+#account .investment-lists .invest-btn {
+    margin-top: 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 16px;
+}
+
+#account .investment-lists .invest-btn {
+    margin-top: 20px;
+}
+
+#account .investment-lists .invest-btn button {
+    width: 121px;
+    height: 32px;
+    padding: 5px 10px;
+}
+
+#account .investment-lists button {
+    width: 202px;
+    height: 44px;
+    font-weight: 600;
+    font-size: 16px;
 }
