@@ -34,8 +34,8 @@ body input.input-search:focus {
     padding: .5em 1em .5em 2.5em;
 }
 
-body input{
-    height:46px;
+body input {
+    height: 46px;
 }
 
 .bgWhite {
@@ -87,16 +87,18 @@ body input{
     color: red;
 }
 
-.fs-12{
+.fs-12 {
     font-size: 12px;
 }
+
 .fs-16 {
     font-size: 16px;
 }
 
-.fs-20{
+.fs-20 {
     font-size: 20px;
 }
+
 .fs-24 {
     font-size: 24px;
 }
@@ -163,15 +165,17 @@ section.banner .inner {
 }
 
 /* Button */
-.btn{
+.btn {
     height: 46px;
     border-radius: 8px;
     font-weight: 600;
     font-size: 16px;
 }
+
 .btn:hover {
     color: #701E87;
 }
+
 .btn:focus {
     box-shadow: none;
 }
@@ -653,4 +657,63 @@ section.banner .inner {
     height: 44px;
     font-weight: 600;
     font-size: 16px;
+}
+
+/* -------------------------------------------------------------LOGIN------------------------------------------------------------- */
+#loginPage {
+    background: url('../images/BG.png');
+}
+
+#loginPage .back-to-home {
+    flex-direction: row;
+    align-items: center;
+    margin: 81px 0 0 72px;
+}
+
+#loginPage .back-to-home span {
+    margin-left: 10px;
+}
+
+#loginPage .sign-up {
+    padding: 72px;
+}
+
+#loginPage .sign-up .sign-up-head {
+    font-size: 40px;
+}
+
+#loginPage .sign-up .sign-up-head span {
+    background: linear-gradient(86.39deg, #D700FF 0%, #8409FF 100.79%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+
+#loginPage .sign-up .sign-up-body {
+    padding: 0 110px;
+}
+
+#loginPage .sign-up .sign-up-body .logo-social {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 20px;
+}
+
+#loginPage .sign-up .sign-up-body .term-of-service {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#loginPage .sign-up .sign-up-body a:hover {
+    color: #8409FF;
+}
+
+#loginPage .bg-login-page {
+    height: 100vh;
+    background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 0, 0, 0.01), rgba(255, 0, 0, 0)), url('../images/bg-login.png') no-repeat;
+    background-size: 100% 100%
 }
